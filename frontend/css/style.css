@@ -1,0 +1,70 @@
+* {
+    margin: 0; /* внешние отступы нахер */
+    padding: 0; /* внутренние отступы нахер */
+    box-sizing: border-box; /* внуренние отступы включительно в ширину/высоту объекта */
+}
+
+body {
+    font-family: 'Crimson Pro', serif;
+    background: #f0f0f0; /* фоновый цвет эелмента */
+    padding: 20px;
+}
+
+/* стиль всего что содержит контент */
+.container {
+    max-width: 800px; /* максимальная ширина */
+    height: 500px;
+    margin: 0 auto; /* 0 - нет внут. отступов сверху/снизу; auto - автоматические отступы слева/справа */
+    background: white;
+    padding: 20px;
+    border-radius: 10px; /* скругленные края в 10px */
+}
+
+/* стиль видео-плеера */
+#videoPlayer {
+    width: 100%; /* на всю ширину родителя (container) */
+    height: 100%; /* не 100, чтобы надпись уместилась */
+    border-radius: 5px;
+    margin-bottom: 20px; /* внешний отступ снизу в 20px */
+}
+
+/* стиль зоны загрузки */
+.upload-area {
+    border: 2px dashed #ccc;
+    padding: 40px;
+    text-align: center; /* выравнивание текста по центру по горизонтали */
+    cursor: pointer; /* меняет курсор стрелочки на палец */
+    margin-bottom: 20px;
+}
+
+/* стиль зоны загрузки при наведении */
+.upload-area:hover {
+    border-color: #007bff;
+    background: #f8f9fa;
+}
+
+/* полоса прогресса загрузки, изначально скрыта */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    display: none; /* скрыть элемент */
+}
+
+/* сама полоса, которая будет расти */
+.progress {
+    width: 0%;
+    height: 100%;
+    background: #28a745;
+    border-radius: 3px;
+    transition: width 0.3s; /* создает плавную анимаю при изменении width на 0.3s */
+}
+/* стиль для инфы видосика, изначално скрыт */
+.video-info {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
