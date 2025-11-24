@@ -1,40 +1,59 @@
 * {
-    margin: 0; /* внешние отступы нахер */
-    padding: 0; /* внутренние отступы нахер */
-    box-sizing: border-box; /* внуренние отступы включительно в ширину/высоту объекта */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
+    min-height: 100vh;
     font-family: 'Crimson Pro', serif;
-    background: #f0f0f0; /* фоновый цвет эелмента */
-    padding: 20px;
+    background: #f0f0f0;
+    display: grid;
+
 }
 
-/* стиль всего что содержит контент */
+.bottom-container {
+    display: grid;
+    grid-template-rows: 1fr, auto;
+    align-items: end;
+}
+
 .container {
-    max-width: 800px; /* максимальная ширина */
-    height: 500px;
-    margin: 0 auto; /* 0 - нет внут. отступов сверху/снизу; auto - автоматические отступы слева/справа */
+    position: relative; /* позволяет двигать элемент относительно того где он должен стоять */
+    width: 50vw;
+    height: 40vw;
+    /* margin-bottom: auto; */
     background: white;
     padding: 20px;
-    border-radius: 10px; /* скругленные края в 10px */
+    border-radius: 10px;
 }
 
 /* стиль видео-плеера */
 #videoPlayer {
-    width: 100%; /* на всю ширину родителя (container) */
-    height: 100%; /* не 100, чтобы надпись уместилась */
-    border-radius: 5px;
-    margin-bottom: 20px; /* внешний отступ снизу в 20px */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    height: calc(80% - 20px);
+    margin-bottom: 15px;
 }
 
 /* стиль зоны загрузки */
 .upload-area {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: calc(20% - 25px);
     border: 2px dashed #ccc;
-    padding: 40px;
-    text-align: center; /* выравнивание текста по центру по горизонтали */
-    cursor: pointer; /* меняет курсор стрелочки на палец */
-    margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
 }
 
 /* стиль зоны загрузки при наведении */

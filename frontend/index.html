@@ -4,26 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Вспышечки</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/css/style.css?v=1.1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata">
     </head>
     <body>
-        <div class="container">
 
-            <video id="videoPlayer" controls> </video>
-            <div class="upload-area" id="uploadArea"> <!--Зона сброса-->
-                <p>Перетащите видео сюда или кликните для видео</p>
-                <input type="file" id="fileInput" accept="video/*" style="display: none">
-            </div> <!--Зона сброса-->
+        <div class="bottom-container">
+            <div class="container">
 
-            <div class="progress-bar" id="progressBar"> <!--Индикатор загрузки-->
-                <div class="progress" id="progress"></div>
-            </div> <!--Индикатор загрузки-->
-            <div class="video-info" id="videoInfo"></div>
+                <video id="videoPlayer" controls> </video>
+                <div class="upload-area" id="uploadArea"> <!--Зона сброса-->
+                    <p>Перетащите видео сюда или кликните для видео</p>
+                    <input type="file" id="fileInput" accept="video/*" style="display: none">
+                </div> <!--Зона сброса-->
 
+                <div class="progress-bar" id="progressBar"> <!--Индикатор загрузки-->
+                    <div class="progress" id="progress"></div>
+                </div> <!--Индикатор загрузки-->
+                <div class="video-info" id="videoInfo"></div>
+            </div>
         </div>
-        <script src="js/mockBackend.js"></script>
-        <script src="js/uiManager.js"></script>
-        <script src="js/app.js"></script>
+
+        <script src="/js/mockBackend.js?v=1.1"></script>
+        <script src="/js/uiManager.js?v=1.1"></script>
+        <script src="/js/app.js?v=1.1"></script>
+
     </body>
 </html>
